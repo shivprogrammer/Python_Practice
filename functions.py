@@ -44,6 +44,7 @@ student_name = input("Enter student name: ")
 student_id = input("Enter student ID: ")
 
 add_student(student_name, student_id)
+save_file(student_name)
 
 # user_wants_to_add_student = input("Would you like to add a student? (yes/no): ").lower()
 
