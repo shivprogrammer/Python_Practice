@@ -18,10 +18,15 @@ def add_student(name, student_id=332):
     students.append(student)
 
 
+user_wants_to_add_student = input("Would you like to add a student? (yes/no): ").lower()
+
+while user_wants_to_add_student == "yes":
+    name = input("Enter student name: ")
+    student_id = int(input("Enter student ID: "))
+    add_student(name, student_id)
+    print("")
+    user_wants_to_add_student = input("Would you like to add another student? (yes/no): ").lower()
+
+print(students)
 student_list = get_students_titlecase()
-
-student_name = input("Enter student name: ")
-student_id = input("Enter student iD: ")
-
-add_student(student_name, student_id)
-print_students_titlecase()
+print(student_list)
