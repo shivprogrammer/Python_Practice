@@ -40,28 +40,17 @@ def read_file():
 read_file()
 print_students_titlecase()
 
-user_wants_to_add_student = input("Would you like to add a student? (yes/no): ").lower()
+student_name = input("Enter student name: ")
+student_id = input("Enter student ID: ")
 
-while user_wants_to_add_student == "yes":
-    name = input("Enter student name: ")
-    student_id = int(input("Enter student ID: "))
-    add_student(name, student_id)
-    print("")
-    user_wants_to_add_student = input("Would you like to add another student? (yes/no): ").lower()
+add_student(student_name, student_id)
 
+# user_wants_to_add_student = input("Would you like to add a student? (yes/no): ").lower()
 
-# print_students_titlecase()
+# while user_wants_to_add_student == "yes":
+#     name = input("Enter student name: ")
+#     student_id = int(input("Enter student ID: "))
+#     add_student(name, student_id)
+#     print("")
+#     user_wants_to_add_student = input("Would you like to add another student? (yes/no): ").lower()
 
-# def get_students():
-#     students = ["mark", "james"]
-#
-#     def get_students_titlecase():
-#         students_titlecase = []
-#         for student in students:
-#             students_titlecase.append(student.title())
-#         return students_titlecase
-#     students_titlecase_names = get_students_titlecase()
-#     print(students_titlecase_names)
-#
-#
-# get_students()
