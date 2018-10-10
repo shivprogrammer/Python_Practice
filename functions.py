@@ -1,3 +1,6 @@
+import os
+cwd = os.getcwd()
+
 students = []
 
 
@@ -27,10 +30,22 @@ def save_file(student):
         print("Could not save file")
 
 
+# What the fuck is going on, this commented out function doesn't work
+# but the one right below it does???????
+# def read_file():
+#     try:
+#         f = open("students.txt", "r")
+#         for student in f.readLines():
+#             add_student(student)
+#         f.close()
+#     except Exception:
+#         print("Could not read file")
+
+
 def read_file():
     try:
         f = open("students.txt", "r")
-        for student in f.readLines():
+        for student in f.readlines():
             add_student(student)
         f.close()
     except Exception:
