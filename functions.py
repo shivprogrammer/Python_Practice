@@ -18,6 +18,28 @@ def add_student(name, student_id=332):
     students.append(student)
 
 
+def save_file(student):
+    try:
+        f = open("students.txt", "a")
+        f.write(student + "\n")
+        f.close()
+    except Exception:
+        print("Could not save file")
+
+
+def read_file():
+    try:
+        f = open("students.txt", "r")
+        for student in f.readLines():
+            add_student(student)
+        f.close()
+    except Exception:
+        print("Could not read file")
+
+
+read_file()
+print_students_titlecase()
+
 user_wants_to_add_student = input("Would you like to add a student? (yes/no): ").lower()
 
 while user_wants_to_add_student == "yes":
@@ -28,7 +50,7 @@ while user_wants_to_add_student == "yes":
     user_wants_to_add_student = input("Would you like to add another student? (yes/no): ").lower()
 
 
-print_students_titlecase()
+# print_students_titlecase()
 
 # def get_students():
 #     students = ["mark", "james"]
