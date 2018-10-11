@@ -4,7 +4,7 @@ students = []
 def read_file():
     try:
         f = open("students.txt", "r")
-        for student in f.readLines():
+        for student in f.readlines(): # for fucks sake please NEVER GOD DAMN CAPITALIZE LINES AGAIN GOD DAMN IT
             students.append(student)
         f.close()
     except Exception:
