@@ -7,7 +7,7 @@ class Student:
 
     def __init__(self, name, student_id=332):
         self.name = name
-        self.student = student_id
+        self.student_id = student_id
         students.append(self)
 
     def __str__(self):
@@ -20,7 +20,12 @@ class Student:
         return self.school_name
 
 
-# mark = Student("Mark")
-# print(mark)
+class HighSchoolStudent(Student):
 
-print(Student.school_name)
+    school_name = "Springfield High School"
+
+    def get_school_name(self):
+        return self.school_name
+
+james = HighSchoolStudent("james")
+print(james.get_name_capitalize())
