@@ -4,7 +4,7 @@ students = []
 def get_students_titlecase():
     students_titlecase = []
     for student in students:
-        students_titlecase = student["name"].title()
+        students_titlecase.append(student["name"].title())
     return students_titlecase
 
 
@@ -49,6 +49,7 @@ def read_file():
         print("Could not read file")
 
 
+# print(students)
 read_file()
 print_students_titlecase()
 
