@@ -1,4 +1,4 @@
-import hs_student
+from hs_student import *
 
-james = hs_student.HighSchoolStudent("james")
+james = HighSchoolStudent("james")
 print(james.get_name_capitalize())
