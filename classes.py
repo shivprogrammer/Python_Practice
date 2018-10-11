@@ -6,5 +6,9 @@ class Student:
         student = {"name": name, "student_id": student_id}
         students.append(student)
 
+    def __str__(self):
+        return "Student"
 
-print(students)
+
+mark = Student("Mark")
+print(mark)
