@@ -27,18 +27,6 @@ def save_file(student):
         print("Could not save file")
 
 
-# What the fuck is going on, this commented out function doesn't work
-# but the one right below it does???????
-# def read_file():
-#     try:
-#         f = open("students.txt", "r")
-#         for student in f.readLines():
-#             add_student(student)
-#         f.close()
-#     except Exception:
-#         print("Could not read file")
-
-
 def read_file():
     try:
         f = open("students.txt", "r")
@@ -49,7 +37,6 @@ def read_file():
         print("Could not read file")
 
 
-# print(students)
 read_file()
 print_students_titlecase()
 
