@@ -6,6 +6,7 @@ students = []
 
 app = Flask(__name__)
 
+
 @app.route("/", methods=["GET", "POST"])
 def students_page():
     if request.method == "POST":
@@ -19,3 +20,7 @@ def students_page():
         return redirect(url_for("students_page"))
 
     return render_template("index.html", student=students)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
